@@ -67,7 +67,7 @@
 
 ## 📱 配套安卓控制软件
 
-本仓库配套的 Android 蓝牙控制软件位于独立仓库：[lhgj0319/-](https://github.com/lhgj0319/-)，用于通过手机蓝牙串口向小车发送控制指令。
+本仓库配套的 Android 蓝牙控制软件位于独立仓库：[lhgj0319/esp32-car-controller-android](https://github.com/lhgj0319/esp32-car-controller-android)，用于通过手机蓝牙串口向小车发送控制指令。
 
 ## 📁 文件结构
 
