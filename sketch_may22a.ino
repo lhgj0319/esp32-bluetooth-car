@@ -37,14 +37,14 @@ struct MotionPlan {
   unsigned long durationMs;
 };
 
-void moveForward() {
+void moveBackward() {
   digitalWrite(IN1, HIGH); digitalWrite(IN2, LOW);
   digitalWrite(IN3, HIGH); digitalWrite(IN4, LOW);
   ledcWrite(pwmChL, PWM_LEFT_FORWARD);
   ledcWrite(pwmChR, PWM_RIGHT_FORWARD);
 }
 
-void moveBackward() {
+void moveForward() {
   digitalWrite(IN1, LOW); digitalWrite(IN2, HIGH);
   digitalWrite(IN3, LOW); digitalWrite(IN4, HIGH);
   ledcWrite(pwmChL, PWM_LEFT_BACKWARD);
@@ -52,15 +52,15 @@ void moveBackward() {
 }
 
 void turnLeft() {
-  digitalWrite(IN1, LOW); digitalWrite(IN2, HIGH);
-  digitalWrite(IN3, HIGH); digitalWrite(IN4, LOW);
+  digitalWrite(IN1, HIGH); digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);  digitalWrite(IN4, HIGH);
   ledcWrite(pwmChL, PWM_LEFT_TURN);
   ledcWrite(pwmChR, PWM_RIGHT_TURN);
 }
 
 void turnRight() {
-  digitalWrite(IN1, HIGH); digitalWrite(IN2, LOW);
-  digitalWrite(IN3, LOW); digitalWrite(IN4, HIGH);
+  digitalWrite(IN1, LOW);  digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, HIGH); digitalWrite(IN4, LOW);
   ledcWrite(pwmChL, PWM_LEFT_TURN);
   ledcWrite(pwmChR, PWM_RIGHT_TURN);
 }
